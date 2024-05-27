@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Title -->
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <!-- Survey Form Container -->
+    <div class="surveyForm-container">
+
+        <!-- Survey Form Title and Description -->
+        <h1 class="surveyForm-title">survey form</h1>
+        <p class="surveyForm-description">Feel free to answer the questions below based on your own experience and opinion. if you are not convenient in answering a particular question please skip it by answering "No". every answer would be very appreciated. Thank you for your time.</p>
+
+        <!-- Survey Form -->
+        <form id="surveyForm" class="surveyForm">
+
+            <!-- Section 1 of the survey form -->
+            <section class="surveyForm__section-1">
+
+                <!-- Name input field -->
+                <section class="name">
+                    <label for="name" class="label-type-emphasis">your name</label>
+                    <br>
+                    <input type="text" class="input-box" name="name" id="surveyForm-name" placeholder="Enter your name">
+                </section>
+
+                <!-- Email input field -->
+                <section class="email">
+                    <label for="email" class="label-type-emphasis">your email address</label>
+                    <br>
+                    <input type="email" class="input-box" name="email" id="surveyForm-email" placeholder="user@user.com">
+                </section>
+
+                <!-- Phone number input field -->
+                <section class="phoneNo">
+                    <label for="phoneNo" class="label-type-emphasis">your phone number</label>
+                    <br>
+
+                    <!-- Form validation not working -->
+                    <input 
+                        type="number" 
+                        class="input-box input-number_hide-arrow" 
+                        name="phoneNo"
+                        id="surveyForm-phoneNo" 
+                        placeholder="9999999999" 
+                        min="1111111111" 
+                        max="9999999999"
+                        title="Please enter a valid phone no">
+                </section>
+
+                <!-- Address input field -->
+                <section class="address">
+                    <label for="address" class="label-type-emphasis">where fo you live?</label>
+                    <br>
+                    <select name="countries" class="input-box" id="address">
+                        <option value="">Select</option>
+                        <option value="India">India</option>
+                        <option value="France">France</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Italy">Italy</option>
+                        <option value="United States">United States</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Denmark">Denmark</option>
+                    </select>
+                </section>
+
+                <!-- Age input field -->
+                <fieldset class="age">
+                    <legend class="age-title">age</legend>
+
+                    <section class="age-section age_section1">
+                        <label for="age_15-20">
+                            <input type="radio" name="age" value="15-20" id="age_15-20">
+                            15-20
+                        </label>
+                        <label for="age_21-30">
+                            <input type="radio" name="age" value="21-30" id="age_21-30">
+                            21-30
+                        </label>
+                        <label for="age_31-40">
+                            <input type="radio" name="age" value="31-40" id="age_31-40">
+                            31-40
+                        </label>
+                    </section>
+                    <section class="age-section age_section2">
+                        <label for="age_41-50">
+                            <input type="radio" name="age" value="41-50" id="age_41-50">
+                            41-50
+                        </label>
+                        <label for="age_na">
+                            <input type="radio" name="age" value="na" id="age_na">
+                            Prefer not to say
+                        </label>
+                    </section>
+                </fieldset>
+
+                <!-- Profecency input field -->
+                <section class="profeciency">
+                    <legend class="profeciency-title label-type-emphasis">How would you rate your profeciency in coding?</legend>
+                    <section class="profeciency-options">
+                        <label for="profeciency_beginner">
+                            <input type="radio" name="profeciency" value="beginner" id="profeciency_beginner">
+                            Beginner
+                        </label>
+                        <label for="profeciency_intermediate">
+                            <input type="radio" name="profeciency" value="intermediate" id="profeciency_intermediate">
+                            Intermediate
+                        </label>
+                        <label for="profeciency_advance">
+                            <input type="radio" name="profeciency" value="advance" id="profeciency_advance">
+                            Advance
+                        </label>
+                    </section>
+                </section>
+
+            </section>
+
+            <!-- Section 2 of the survey form -->
+            <section class="surveyForm__section-2">
+
+                <!-- Contest input field -->
+                <section class="contest">
+                    <legend class="contest-title label-type-emphasis">Have you ever appeared in any coding contest?</legend>
+                    <section class="contest-options">
+                        <label for="contest_yes">
+                            <input type="radio" name="contest" value="yes" id="contest_yes">
+                            Yes
+                        </label>
+                        <label for="contest_no">
+                            <input type="radio" name="contest" value="no" id="contest_no">
+                            No
+                        </label>
+                    </section>
+                </section>
+
+                <section class="passion">
+                    <label class="passion-title label-type-emphasis" for="passion">Discuss what drives your passion for coding and outline
+                        your aspirations in the field.</label>
+                    <br>
+                    <textarea class="textarea-big" name="passion" id="passion" cols="50" rows="4"></textarea>
+                </section>
+
+                <section class="challenges">
+                    <label class="challenges-title label-type-emphasis" for="challenges">What are some of the challenges you face while
+                        coding?</label>
+                    <br>
+                    <textarea class="textarea-big" name="challenges" id="challenges" cols="50" rows="4"></textarea>
+                </section>
+
+                <section class="dataStructures">
+                    <label class="dataStructures-title label-type-emphasis" for="dataStructures">Please list the Data Structures you have a
+                        strong understanding of.</label>
+                    <br>
+                    <textarea class="textarea-big" name="dataStructures" id="dataStructures" cols="50" rows="4"></textarea>
+                </section>
+
+                <input type="submit" class="submit-btn" value="Submit Form">
+            </section>
+        </form>
+    </div>
+</body>
+
+</html>
