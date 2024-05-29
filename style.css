@@ -63,6 +63,7 @@ body {
     padding: 1rem;
 
     width: min(1200px, 80vw); /* The form stretches upto 1200px maximum and stays at 80vw width at all times */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 16px;
 }
 
 .surveyForm-title {
